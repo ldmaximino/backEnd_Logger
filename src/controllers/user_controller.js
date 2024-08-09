@@ -3,6 +3,7 @@ import Controllers from "./class.controller.js";
 import UserService from "../services/user_services.js";
 import { generateToken } from "../middlewares/jwt.js";
 import { httpResponse } from "../utils/httpResponse.js";
+import { logger } from "../utils/logger.js";
 
 const userService = new UserService();
 
@@ -13,6 +14,7 @@ export default class UserController extends Controllers {
 
   async registerResponse(req, res, next) {
     try {
+      logger.warn(`New user registered`);
       if (req.headers["user-agent"].slice(0, 7) === "Postman") {
         res.status(400).json({ message: "User created" });
       } else {
@@ -31,6 +33,7 @@ export default class UserController extends Controllers {
           return res.json({ message: "User not exists" });
         } else return res.redirect("/user_login_error");
       }
+      logger.warn(`User ${user.email} logged in`);
       const token = generateToken(user);
       res.cookie("token", token, { httpOnly: true });
       if (req.headers["user-agent"].slice(0, 7) === "Postman") {

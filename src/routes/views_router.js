@@ -7,6 +7,7 @@ import factory from "../persistence/daos/factory.js";
 import UserService from "../services/user_services.js";
 import { numberFormat } from "../utils/utils.js";
 import { refreshToken } from "../middlewares/jwt.js";
+import { logger } from "../utils/logger.js";
 
 const router = Router();
 
@@ -32,18 +33,21 @@ router.get("/login", (req, res) => {
 //Github Login
 router.get("/login-github", async (req, res) => {
   //Redirect to '/products' (View Products)
+  logger.warn('User logged with GitHub');
   res.redirect("products");
 });
 
 router.get("/logout", (req, res) => {
   req.logout((err) => {
     if (err) res.send(err);
+    logger.warn(`User logged out`);
     res.redirect("/login");
   });
 });
 
 //View Error User Login
 router.get("/user_login_error", (req, res) => {
+  logger.error('User login error');
   res.render("user_login_error");
 });
 

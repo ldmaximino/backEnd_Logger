@@ -1,12 +1,2 @@
-| [31merror[39m | 09-08-2024 18:23:00 | error ReferenceError: logger is not defined
-    at file:///C:/Users/ldmax/Documents/.Programacion/CoderHouse/Desarrollo%20Back%20End/16-Implementaci%C3%B3n%20Logger/src/routes/logger_router.js:12:5
-    at Layer.handle [as handle_request] (C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\express\lib\router\layer.js:95:5)
-    at next (C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\express\lib\router\route.js:149:13)
-    at complete (C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\passport\lib\middleware\authenticate.js:280:13)
-    at C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\passport\lib\middleware\authenticate.js:287:15
-    at pass (C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\passport\lib\authenticator.js:446:14)
-    at Authenticator.transformAuthInfo (C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\passport\lib\authenticator.js:468:5)
-    at C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\passport\lib\middleware\authenticate.js:284:22
-    at C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\passport\lib\http\request.js:41:7
-    at C:\Users\ldmax\Documents\.Programacion\CoderHouse\Desarrollo Back End\16-Implementación Logger\node_modules\passport\lib\sessionmanager.js:51:9 |
-| [31merror[39m | 09-08-2024 18:23:23 | log error |
+| [31merror[39m | 09-08-2024 19:39:41 | User login error |
+| [31merror[39m | 09-08-2024 19:41:51 | User login error |
